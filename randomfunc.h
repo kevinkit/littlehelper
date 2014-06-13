@@ -29,22 +29,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 int int_rand_span(int min,int max)
 {
 	int x;
@@ -52,7 +36,7 @@ int int_rand_span(int min,int max)
 	int y;
 	if(min > max)
 	{
-		printf("The minimum is larger than the maximum in the function int_rand_span - maybe switched it?\n")
+		printf("The minimum is larger than the maximum in the function int_rand_span - maybe switched it?\n");
 	}
 
 	if(max > 0 && min > 0 || (max > 0 && min < 0))
@@ -104,29 +88,25 @@ double float_rand_span(double min,double max, int dec)
 	int i;
 	int divid = 10;
 	
-	int(min > max)
+	if(min > max)
 	{
 		printf("The minimum is larger than the maximum in the function float_rand_span - maybe switched it?\n");
 	}
-	
-	
-		if( max > 0 && min > 0 || (max > 0 && min < 0)
+		if( max > 0 && min > 0 || (max > 0 && min < 0))
 		{
 			x = (double) ((rand() % (int) max) + min +1);
 		}
 		else
 		{
-			x = (double) ((rand() % int min) + max + 1);
+			x = (double) ((rand() % (int) min) + max + 1);
 		}
-	
 		int pos_neg;	
 		if(max > 0 && min < 0)
 		{
-
 			pos_neg = rand() %2;
 			if(pos_neg == 1)
 			{
-				x = rand()%max +1;
+				x = rand()% (int)max +1;
 				if(x < min)
 				{
 					x = min;
@@ -139,7 +119,7 @@ double float_rand_span(double min,double max, int dec)
 			else
 			{
 				min = min*(-1);
-				x = rand()%(min +1);
+				x = rand()%((int)min +1);
 				x = x*(-1);
 				if(x < min*(-1))
 				{
@@ -147,9 +127,6 @@ double float_rand_span(double min,double max, int dec)
 				}
 			}
 		}
-
-		
-
 	if(dec > 1)
 	{
 			
@@ -158,17 +135,12 @@ double float_rand_span(double min,double max, int dec)
 			divid = divid*10;
 		}
 		
-		x = x + x/divid ;
+		x = x + x/divid;
 	}
 	else	
 	{
 		x = x;		
 	}
-
-	
-
-	
-		
 	return x;
 } 
 
