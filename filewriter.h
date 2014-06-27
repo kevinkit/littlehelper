@@ -242,6 +242,7 @@ int openfrac(const char* path, int* values, int fraction, int index)
 
         splitarray(values_puffer, fraction, index, values);
         fclose(file);
+        free(values_puffer);
 
 }
 
